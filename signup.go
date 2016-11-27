@@ -79,9 +79,8 @@ func loginPage(res http.ResponseWriter, req *http.Request) {
 func homePage(res http.ResponseWriter, req *http.Request) {
 	http.ServeFile(res, req, "index.html")
 }
-
 func main() {
-	db, err = sql.Open("mysql", "root:<password>@/<dbname>")
+	db, err = sql.Open("mysql", "b71da173aea4cf:05606ea1@eu-cdbr-azure-west-a.cloudapp.net/godatabase")
 	if err != nil {
 		panic(err.Error())
 	}
